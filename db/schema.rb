@@ -16,8 +16,15 @@ ActiveRecord::Schema.define(version: 20171114164228) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.text "body", null: false
+    t.integer "parent_comment_id"
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["parent_comment_id"], name: "index_comments_on_parent_comment_id"
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "post_subs", force: :cascade do |t|
@@ -51,8 +58,15 @@ ActiveRecord::Schema.define(version: 20171114164228) do
   end
 
   create_table "user_votes", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "value", null: false
+    t.integer "votable_id", null: false
+    t.string "votable_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id", "votable_type", "votable_id"], name: "index_user_votes_on_user_id_and_votable_type_and_votable_id", unique: true
+    t.index ["user_id"], name: "index_user_votes_on_user_id"
+    t.index ["votable_type", "votable_id"], name: "index_user_votes_on_votable_type_and_votable_id"
   end
 
   create_table "users", force: :cascade do |t|

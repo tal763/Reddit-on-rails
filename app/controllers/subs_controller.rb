@@ -12,7 +12,7 @@ class SubsController < ApplicationController
   end
 
   def show
-      @sub = Sub.find(params[:id])
+    @sub = Sub.find(params[:id])
   end
 
   def create
