@@ -1,19 +1,21 @@
-<div class="border">
-  <h1>
-    <%= @sub.name %>
-  </h1>
+<h1> New User! </h1>
 
-  <b> Description </b>
-  <p> <%= @sub.description %> </p>
+<form action="<%= users_url %>" method="post">
+  <input type="hidden" name="authenticity_token"
+         value="<%= form_authenticity_token %>">
+  <label for="user_username"> Username </label>
+  <input
+    type="text"
+    name="user[name]"
+    value="<%= @user.name %>"
+    id="user_username">
 
-  <%= link_to "Make New Post!", new_post_url %>
+  <label for="user_password"> Password </label>
+  <input
+    type="password"
+    name="user[password]"
+    id="user_password">
 
-  <ul>
-    <% @sub.posts.each do |post| %>
-      <li> (<%= post.votes %>) <%= link_to post.title, post %> </li>
-    <% end %>
-  </ul>
+  <input type="submit" value="create user">
 
-  <%= link_to "Edit", edit_sub_url(@sub) if @sub.moderator == current_user %>
-
-</div> 
+</form>
