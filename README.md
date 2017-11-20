@@ -19,6 +19,7 @@ The App is functional, but needs minor debugging before deployment. A live demo 
 
   * Deployment instructions:
   - Download folder from my repository.
+  - Run bundle install
   - create and initialize database.
   - Create Heroku app. Consult https://devcenter.heroku.com/articles/git#deploying-code for more detailed information.
   - Run Heroku database initialization commands.
