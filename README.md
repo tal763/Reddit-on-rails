@@ -40,9 +40,3 @@ The App is functional, but needs minor debugging before deployment. A live demo 
 * Services (job queues, cache servers, search engines, etc.)
 
 -->
-
-
-
-
-
-* ...
