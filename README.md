@@ -18,11 +18,11 @@ The App is functional, but needs minor debugging before deployment. A live demo 
   - ```rake db:seed``` to seed our database with initial criteria.
 
 * Deployment instructions:
-- Download folder from my repository.
-- Run ```bundle install```
-- create and initialize database.
-- Create Heroku app. Consult https://devcenter.heroku.com/articles/git#deploying-code for more detailed information.
-- Run Heroku database initialization commands.
+  - Download folder from my repository.
+  - Run ```bundle install```
+  - create and initialize database.
+  - Create Heroku app. Consult https://devcenter.heroku.com/articles/git#deploying-code for more detailed     information.
+  - Run Heroku database initialization commands.
 
     ```
     heroku run rails db:migrate:status
