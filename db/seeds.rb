@@ -74,7 +74,7 @@ Comment.create(post_id: 20, user_id: 11, body: 'RULES: Play nice! No cursing, ar
 Comment.create(post_id: 1, user_id: 9, body: 'I\'m happy as long as it\'s better than Episode I..')
 Comment.create(post_id: 2, user_id: 4, body: 'Legolas is the coolest character hands down.')
 Comment.create(post_id: 3, user_id: 3, body: 'The Dachund is originally German, right?')
-Comment.create(post_id: 4, user_id: 1, body: 'Uh oh, I heard scottiest are\'t the friendliest. Good luck.')
+Comment.create(post_id: 4, user_id: 1, body: 'Uh oh, I have heard that scottiest aren\'t the friendliest. Good luck.')
 Comment.create(post_id: 5, user_id: 8, body: 'Any cookie is a good cookie.')
 Comment.create(post_id: 6, user_id: 5, body: 'Eww, Indian cuisine.')
 Comment.create(post_id: 7, user_id: 6, body: 'Gig \'em Aggies!')
